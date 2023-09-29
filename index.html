@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <style>
+    /* Adiciona uma largura fixa e margem inferior para os inputs */
+    input.form-control {
+      width: 300px;
+      margin-bottom: 10px;  /* Adiciona 10px de margem na parte inferior */
+    }
+  </style>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+  <h1>Cadastro de Livros</h1>
+  <div class="formulario alert alert-light">
+    <div class="row align-items-center">
+      <div class="col-2">
+        <label for="titulo">Título</label>
+      </div>
+      <div class="col-10">
+        <input type="text" id="titulo" class="form-control" />
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-2">
+        <label for="autor">Autor</label>
+      </div>
+      <div class="col-10">
+        <input type="text" id="autor" class="form-control" />
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-2">
+        <label for="ano">Ano</label>
+      </div>
+      <div class="col-10">
+        <input type="text" id="ano" class="form-control" />
+      </div>
+    </div>
+  </div>
+  <div style="margin: 20px">
+    <button class="btn btn-primary" onclick="inserirLivro()">Salvar</button>
+    <button class="btn btn-success" onclick="listarLivros()">Listar Livros</button>
+    <button class="btn btn-danger" onclick="apagarLivros()">Apagar Lista</button>
+  </div>
+  <div>
+    <ol id="listaLivros"></ol>
+  </div>
+  <script src="script.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
